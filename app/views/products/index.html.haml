@@ -1,3 +1,10 @@
+.owl-carousel
+  .img-slider
+    = image_tag(image_url("img1.jpeg"))
+  .img-slider
+    = image_tag(image_url("img1.jpeg"))
+  .img-slider
+    = image_tag(image_url("img1.jpeg"))
 .row
   %h3.column{:style => "margin-top: 5%; text-align: center;"} Featured Products
 
@@ -22,4 +29,6 @@
               = link_to product, class: "right store-icon" do
                 = image_tag('https://29cardgame.net/fbshop/bunonshop/img/photos/cloth.jpg')
 
-    
+= javascript_include_tag "owl"
+
+  

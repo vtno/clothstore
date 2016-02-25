@@ -12,11 +12,12 @@
  *
  *= require_tree .
  *= require_self
-//= require foundation_and_overrides
-
  *= require foundation_and_overrides
+ *= require owl.carousel
+ *= require owl.theme
 
  */ 
+
  @import 'foundation-icons.css';
  .store-icon {
  	width: 20%;

@@ -7,12 +7,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-   
     = render "layouts/header"
     = render "layouts/alert"
-    #main-content.row.full-min-height
-      = yield
-      %footer{:class=>"row"}
-        .large-12.columns
-          %p>©Clothstore for my job 2016
+    = yield
+    %footer{:class=>"row"}
+      .large-12.columns
+        %p{:style => "text-align: center;"}>©Clothstore for my job 2016
 
