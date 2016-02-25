@@ -11,6 +11,8 @@
 %p
   %strong Description:
   = @product.description
+
+= (1-@product.promotion/100)*@product.price
 /= link_to 'Edit', edit_product_path(@product)
-/|
+|
 = link_to 'Back', products_path

@@ -1,0 +1,30 @@
+.top-bar
+  .top-bar-left
+    %ul.menu
+      %li.menu-text Clothstore
+      %li
+        %a{:href => "#"} Home
+
+  .top-bar-right
+    %ul.menu
+      %li
+        =link_to "Log in","#"
+      %li
+        =link_to "Register","#"
+
+.orbit{"aria-label" => "Favorite Space Pictures", "data-orbit" => "", :role => "region"}
+  %ul.orbit-container
+    %button.orbit-previous{"aria-label" => "previous"}
+      %span.show-for-sr> Previous Slide
+      \◀
+    %button.orbit-next{"aria-label" => "next"}
+      %span.show-for-sr> Next Slide
+      \▶
+    %li.orbit-slide.is-active
+      %img{:src => "https://images.unsplash.com/1/apple-gear-looking-pretty.jpg?crop=entropy&dpr=2&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250"}/
+    %li.orbit-slide
+      %img{:src => "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=4e0af949e5440c6c86c42466c353a1f5"}/
+    %li.orbit-slide
+      %img{:src => "http://placehold.it/2000x750"}/
+    %li.orbit-slide
+      %img{:src => "http://placehold.it/2000x750"}/
