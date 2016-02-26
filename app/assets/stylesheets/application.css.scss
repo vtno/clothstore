@@ -17,9 +17,134 @@
  *= require owl.theme
 
  */ 
-
+$darkgr: rgb(40, 40, 40);
+$darkergr: rgb(10,10,10);
+$gold: rgb(212,175,55);
+$gr: rgb(80,80,80);
+$b-tags: '.b-custom,.b-custom:visited';
  @import 'foundation-icons.css';
- .store-icon {
- 	width: 20%;
- 	height: 20%;
+ .label.original-price {
+ 	text-decoration: line-through;
+ 	background-color: $darkergr;
+ 	font-size: 0.5rem;
  }
+#{$b-tags} {
+ 	color: white;
+ 	background: $gr;
+ }
+.b-custom:hover{
+	background: grey;
+}
+.label {
+ 	background: $gold;
+ }
+.topic-label{
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin: 1em 0 1em 0;
+}
+ body {
+ 	background: $darkergr;
+ }
+ .glassy-bg{
+ 	background: $darkgr;
+ }
+ .title{
+ 	color:white;
+ }
+ /*.topic {
+ 	background: $darkgr;
+ 	padding: 1em 0 1em 0;
+ 	max-width: 73.5rem;
+ 	margin: auto;
+ }*/
+ .foot{
+ 	background:white;
+ 	padding-top: 1%;
+ }
+ .owl-prev, .owl-next{
+ 	color:white !important;
+ 	background: $darkgr !important;
+ }
+ .top-bar{
+ 	background: $darkgr;
+ 	.top-bar-left {
+ 		.menu {
+ 			background: $darkgr;
+ 			color: white;
+ 			
+	 		a{
+	 			font-size: 2.3vh !important;
+	 			color:white;
+	 			li{
+	 				.menu-text{
+	 					padding-right: 1em !important; 
+	 				}
+	 				
+	 			}
+	 		}
+	 		
+ 		}
+ 	}
+ 	.top-bar-right {
+ 		.menu {
+ 			margin-right: 2em;
+ 			background: $darkgr;
+ 			li{
+	 			a{
+	 				font-size: 2.3vh !important;
+	 				padding-right: 1em; 
+		 			color: white;
+		 		}
+		 	}
+ 		}
+ 	}
+ 	
+ }
+h1 {
+  font-size: 5.9vw;
+}
+h3 {
+  font-size: 3.5vh;
+}
+h6 {
+  font-size: 2.5vh
+}
+p, a {
+  font-size: 1.5vh !important;
+}
+@media only screen and (max-width: 720px) {
+   .top-bar{
+ 	background: $darkgr;
+ 		.top-bar-left {
+ 			.menu {
+ 				background: $darkgr;
+ 				color: white;
+ 				a{
+ 					font-size: 4vh;
+ 					color:white;
+ 					padding: 15% 0 15% 1em;
+ 				}
+
+ 			}
+ 		}
+
+	}
+	.top-bar{
+ 	background: $darkgr;
+ 		.top-bar-right {
+ 			.menu {
+ 				background: $darkgr;
+ 				color: white;
+ 				a{
+ 					font-size: 4vh;
+ 					color:white;
+ 					padding: 15% 0 15% 1em;
+ 				}
+
+ 			}
+ 		}
+
+	}
+}

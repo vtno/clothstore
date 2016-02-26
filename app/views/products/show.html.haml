@@ -1,16 +1,18 @@
 %p#notice= notice
+.row
+	.small-12.medium-6large-6.columns
+		%h6
+			Name: 
+			= @product.name
 %p
-  %strong Name:
-  = @product.name
+	%strong Type:
+	= @product.cloth_type
 %p
-  %strong Type:
-  = @product.cloth_type
+	%strong Price:
+	= @product.price
 %p
-  %strong Price:
-  = @product.price
-%p
-  %strong Description:
-  = @product.description
+	%strong Description:
+	= @product.description
 
 = (1-@product.promotion/100)*@product.price
 /= link_to 'Edit', edit_product_path(@product)

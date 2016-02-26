@@ -1,33 +1,37 @@
 .owl-carousel
   .img-slider
-    = image_tag(image_url("img1.jpeg"))
+    = image_tag(asset_path("img1.jpeg"))
   .img-slider
-    = image_tag(image_url("img1.jpeg"))
+    = image_tag(asset_path("img1.jpeg"))
   .img-slider
-    = image_tag(image_url("img1.jpeg"))
-.row
-  %h3.column{:style => "margin-top: 5%; text-align: center;"} Featured Products
+    = image_tag(asset_path("img1.jpeg"))
 
+%h3{:class=>"topic-label"} Clothstore Products
+.row
   .column
     %ul.product-grid.no-bullet.row
       - @products.each do |product|
-        %li.large-3.medium-4.small-12.column
+        %li.large-3.medium-6.small-12.column
           .product-card.padly
             = link_to product, class: "poster" do
-              = image_tag('http://placehold.it/300x400', :class => "thumbnail")
+              //to be linked with database image
+              = image_tag(asset_path('product_img.jpeg'), :class => "small")
             .product-info.ell.glassy-bg.padmy.padlx
-              .title
+              .title.left
                 %h6
                   = product.name
                   %span
                     (#{product.cloth_type})
-              %p.left.price.label.product-label.radius
-                - if product.check_discount
-                  $ #{product.price * (1-product.promotion/100)}
+                - if product.promotion != 0
+                  %p.left.price.label.product-label.radius 
+                    $ #{product.price * (1-product.promotion/100)}
+                  %p{:class =>"left price label product-label radius original-price"}
+                    $ #{product.price}
                 - else
-                  $ #{product.price}  
-              = link_to product, class: "right store-icon" do
-                = image_tag('https://29cardgame.net/fbshop/bunonshop/img/photos/cloth.jpg')
+                  %p.left.price.label.product-label.radius
+                    $ #{product.price}
+              = link_to "Add to list", product_path(product), class: "right button tiny b-custom" 
+                
 
 = javascript_include_tag "owl"
 
