@@ -27,6 +27,7 @@ gem 'haml-rails'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'owlcarousel-rails'
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

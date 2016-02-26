@@ -28,21 +28,42 @@ $b-tags: '.b-custom,.b-custom:visited';
  	background-color: $darkergr;
  	font-size: 0.5rem;
  }
+ .button:visited {
+ 	color:white;
+ }
 #{$b-tags} {
  	color: white;
  	background: $gr;
  }
+ .card {
+ 	background: $darkgr;
+ 	padding: 1rem 1rem 1rem 1rem;
+ }
+.b-show{
+	background: $darkgr !important;
+}
 .b-custom:hover{
 	background: grey;
+}
+.but-row{
+
 }
 .label {
  	background: $gold;
  }
+.label-show {
+	font-size: 1.3rem;
+}
 .topic-label{
 	color: white;
 	text-align: center;
 	font-weight: bold;
 	margin: 1em 0 1em 0;
+}
+.op-show {
+	font-size: 1rem;
+	text-decoration: line-through;
+	background: $darkergr;
 }
  body {
  	background: $darkergr;
@@ -61,7 +82,7 @@ $b-tags: '.b-custom,.b-custom:visited';
  }*/
  .foot{
  	background:white;
- 	padding-top: 1%;
+ 	padding-top: 1rem;
  }
  .owl-prev, .owl-next{
  	color:white !important;
@@ -89,7 +110,6 @@ $b-tags: '.b-custom,.b-custom:visited';
  	}
  	.top-bar-right {
  		.menu {
- 			margin-right: 2em;
  			background: $darkgr;
  			li{
 	 			a{
@@ -102,22 +122,12 @@ $b-tags: '.b-custom,.b-custom:visited';
  	}
  	
  }
-h1 {
-  font-size: 5.9vw;
-}
-h3 {
-  font-size: 3.5vh;
-}
-h6 {
-  font-size: 2.5vh
-}
-p, a {
-  font-size: 1.5vh !important;
-}
+
 @media only screen and (max-width: 720px) {
    .top-bar{
  	background: $darkgr;
  		.top-bar-left {
+ 			width: 70%!important;
  			.menu {
  				background: $darkgr;
  				color: white;
@@ -134,13 +144,14 @@ p, a {
 	.top-bar{
  	background: $darkgr;
  		.top-bar-right {
+ 			width: 30%!important;
  			.menu {
  				background: $darkgr;
  				color: white;
  				a{
  					font-size: 4vh;
  					color:white;
- 					padding: 15% 0 15% 1em;
+ 					padding: 15% 0 15% 0;
  				}
 
  			}
