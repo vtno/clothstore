@@ -74,6 +74,13 @@ $b-tags: '.b-custom,.b-custom:visited';
  .title{
  	color:white;
  }
+ .forget, .forget:visited{
+ 	color: rgb(180,180,180);
+ }
+ .forget:hover{
+ 	color: white;
+ 	font-weight: bold;
+ }
  /*.topic {
  	background: $darkgr;
  	padding: 1em 0 1em 0;
