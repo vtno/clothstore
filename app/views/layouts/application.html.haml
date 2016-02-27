@@ -4,7 +4,8 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %meta{:name=>"viewport", :content =>"width=device-width, initial-scale=1"}
     %title Clothstore
-  = stylesheet_link_tag    'application', media: 'all'
+    = include_gon
+    = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
@@ -15,3 +16,4 @@
       .large-12.columns
         %p{:style => "text-align: center;"}>©Clothstore for my job 2016. Created by Tino Thamjarat 
 
+    %script{:src=>"https://js.braintreegateway.com/js/braintree-2.21.0.min.js"}

@@ -1,0 +1,2 @@
+module AfterpaymentsHelper
+end

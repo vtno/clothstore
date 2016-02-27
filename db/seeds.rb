@@ -7,9 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
 	CSV.foreach(Rails.root.join("db/seeds_data/clothstore_data.csv"), headers: true) do |row|
-  		Product.find_or_create_by(name: row[0], cloth_type: row[1], price: row[2], description: row3], promotion: row[4])
-  		CSV.foreach(Rails.root.join("db/seeds_data/clothstore_data.csv"), headers: true) do |row|
-  		Product.find_or_create_by(name: row[5], cloth_type: row[6], price: row[7])
+  		Product.find_or_create_by(name: row[0], cloth_type: row[1], price: row[2], description: row3], promotion: row[4]) 
 
 
-end
+endAdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

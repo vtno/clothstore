@@ -25,4 +25,13 @@
 					%h4{:class=>"scale title"} 
 						$
 						=product.price
+	.row
+		.column
+			%h2{:class=>"title mt1 right"} 
+				Total price
+				%span
+					$#{current_user.cart_total_price}
+	=link_to 'Continue shopping',products_path, :class=>"button right ml1"
+	=link_to 'Checkout',new_transaction_path, :class=>"button right"
+
 =javascript_include_tag "remove_from_cart"

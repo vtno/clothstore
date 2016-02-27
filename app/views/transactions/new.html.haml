@@ -1,0 +1,7 @@
+.form-container.glassy-bg.small-10.small-centered.medium-8.large-6.columns.mt1.mb1
+  %h2.mbs.title New Transaction
+  = form_tag transactions_path do
+    %p.title Please enter your payment details:
+    #dropin
+    = submit_tag "Pay $#{current_user.cart_total_price}", class: "button mt1"
+    = link_to "Back", carts_path, class:"button mt1"

@@ -30,6 +30,11 @@ gem 'owlcarousel-rails'
 gem 'devise'
 gem 'redis', '>= 3.2.0'
 gem 'hiredis', '~> 0.6.0'
+gem 'braintree'
+gem "figaro"
+gem 'gon'
+gem 'activeadmin', github: 'activeadmin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
