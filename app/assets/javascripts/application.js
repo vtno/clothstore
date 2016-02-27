@@ -13,12 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
 //= require_tree 
+//= require turbolinks
 //= require owl.carousel
+//= require add_remove_button
+
 
 $(function(){ 
 	$(document).foundation();
 });
-
 

@@ -22,6 +22,14 @@
 				= @product.description
 
 			.row.right.but-row
-				= link_to 'Add to list', products_path, :class =>"button b-custom"
+				- if signed_in?
+					= link_to '', :class =>"button b-custom", data: {target: @cart_action, addUrl: add_to_carts_path(@product), removeUrl: remove_from_carts_path(@product)} do
+
+						%i{:class=>"fi-shopping-cart"}
+						%span
+							= @cart_action
+						Cart
 				/= link_to 'Comment', edit_product_path(@product), :class => "button"
 				= link_to 'Back', products_path, :class =>"button"
+
+= javascript_include_tag "add_remove_button"

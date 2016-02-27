@@ -35,7 +35,7 @@ $b-tags: '.b-custom,.b-custom:visited';
  	background: red;
  }
  .b-er:hover{
- 	background:darkred;
+	background:darkred;
  }
 #{$b-tags} {
  	color: white;
@@ -53,6 +53,9 @@ $b-tags: '.b-custom,.b-custom:visited';
 }
 .but-row{
 
+}
+.cart-count {
+	vertical-align: top !important;
 }
 .label {
  	background: $gold;

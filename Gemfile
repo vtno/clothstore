@@ -28,6 +28,8 @@ gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'owlcarousel-rails'
 gem 'devise'
+gem 'redis', '>= 3.2.0'
+gem 'hiredis', '~> 0.6.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -12,3 +12,4 @@ Rails.application.config.assets.precompile += %w( body_bg.jpg )
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( owl.js )
+Rails.application.config.assets.precompile += %w( add_remove_button.js )

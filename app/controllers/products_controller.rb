@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
+    @cart_action = @product.cart_action current_user.try :id
   end
 
   # GET /products/new
@@ -60,6 +62,7 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   #def re_render
   #  respond_to do |format|
