@@ -14,9 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree 
-//= require turbolinks
 //= require owl.carousel
-//= require add_remove_button
 
 
 $(function(){ 
