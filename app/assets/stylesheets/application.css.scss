@@ -16,165 +16,182 @@
  *= require owl.carousel
  *= require owl.theme
 
- */ 
-$darkgr: rgb(40, 40, 40);
-$darkergr: rgb(10,10,10);
-$gold: rgb(212,175,55);
-$gr: rgb(80,80,80);
-$b-tags: '.b-custom,.b-custom:visited';
- @import 'foundation-icons.css';
- .label.original-price {
- 	text-decoration: line-through;
- 	background-color: $darkergr;
- 	font-size: 0.5rem;
- }
- .button:visited {
- 	color:white;
- }
- .b-er {
- 	background: red;
- }
- .b-er:hover{
-	background:darkred;
- }
-#{$b-tags} {
- 	color: white;
- 	background: $gr;
- }
- .card {
- 	background: $darkgr;
- 	padding: 1rem 1rem 1rem 1rem;
- }
-.b-show{
-	background: $darkgr !important;
-}
-.b-custom:hover{
-	background: grey;
-}
-.but-row{
+ */
 
+$darkgr: rgb(40, 40, 40);
+$darkergr: rgb(10, 10, 10);
+$gold: rgb(212, 175, 55);
+$gr: rgb(80, 80, 80);
+$b-tags: '.b-custom,.b-custom:visited';
+@import 'foundation-icons.css';
+.label.original-price {
+    text-decoration: line-through;
+    background-color: $darkergr;
+    font-size: 0.5rem;
 }
+
+.button:visited {
+    color: white;
+}
+
+.b-er {
+    background: red;
+}
+
+.b-er:hover {
+    background: darkred;
+}
+
+#{$b-tags} {
+    color: white;
+    background: $gr;
+}
+
+.card {
+    background: $darkgr;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.b-show {
+    background: $darkgr !important;
+}
+
+.b-custom:hover {
+    background: grey;
+}
+
+.but-row {}
+
 .cart-count {
-	vertical-align: top !important;
+    vertical-align: top !important;
 }
+
 .label {
- 	background: $gold;
- }
-.form-label{
-	font-size: 2.5vh;
+    background: $gold;
 }
+
+.form-label {
+    font-size: 2.5vh;
+}
+
 .label-show {
-	font-size: 1.3rem;
+    font-size: 1.3rem;
 }
-.topic-label{
-	color: white;
-	text-align: center;
-	font-weight: bold;
-	margin: 1em 0 1em 0;
+
+.topic-label {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin: 1em 0 1em 0;
 }
+
 .op-show {
-	font-size: 1rem;
-	text-decoration: line-through;
-	background: $darkergr;
+    font-size: 1rem;
+    text-decoration: line-through;
+    background: $darkergr;
 }
- body {
- 	background: $darkergr;
- }
- .glassy-bg{
- 	background: $darkgr;
- }
- .title{
- 	color:white;
- }
- .forget, .forget:visited{
- 	color: rgb(180,180,180);
- }
- .forget:hover{
- 	color: white;
- 	font-weight: bold;
- }
- /*.topic {
+
+body {
+    background: $darkergr;
+}
+
+.glassy-bg {
+    background: $darkgr;
+}
+
+.title {
+    color: white;
+}
+
+.forget,
+.forget:visited {
+    color: rgb(180, 180, 180);
+}
+
+.forget:hover {
+    color: white;
+    font-weight: bold;
+}
+
+
+/*.topic {
  	background: $darkgr;
  	padding: 1em 0 1em 0;
  	max-width: 73.5rem;
  	margin: auto;
  }*/
- .foot{
- 	background:white;
- 	padding-top: 1rem;
- }
- .owl-prev, .owl-next{
- 	color:white !important;
- 	background: $darkgr !important;
- }
- .top-bar{
- 	background: $darkgr;
- 	.top-bar-left {
- 		.menu {
- 			background: $darkgr;
- 			color: white;
- 			
-	 		a{
-	 			font-size: 2.3vh !important;
-	 			color:white;
-	 			li{
-	 				.menu-text{
-	 					padding-right: 1em !important; 
-	 				}
-	 				
-	 			}
-	 		}
-	 		
- 		}
- 	}
- 	.top-bar-right {
- 		.menu {
- 			background: $darkgr;
- 			li{
-	 			a{
-	 				font-size: 2.3vh !important;
-	 				padding-right: 1em; 
-		 			color: white;
-		 		}
-		 	}
- 		}
- 	}
- 	
- }
+
+.foot {
+    background: white;
+    padding-top: 1rem;
+}
+
+.owl-prev,
+.owl-next {
+    color: white !important;
+    background: $darkgr !important;
+}
+
+.top-bar {
+    background: $darkgr;
+    .top-bar-left {
+        .menu {
+            background: $darkgr;
+            color: white;
+            a {
+                font-size: 2.3vh !important;
+                color: white;
+                li {
+                    .menu-text {
+                        padding-right: 1em !important;
+                    }
+                }
+            }
+        }
+    }
+    .top-bar-right {
+        .menu {
+            background: $darkgr;
+            li {
+                a {
+                    font-size: 2.3vh !important;
+                    padding-right: 1em;
+                    color: white;
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 720px) {
-   .top-bar{
- 	background: $darkgr;
- 		.top-bar-left {
- 			width: 70%!important;
- 			.menu {
- 				background: $darkgr;
- 				color: white;
- 				a{
- 					font-size: 4vh;
- 					color:white;
- 					padding: 15% 0 15% 1em;
- 				}
-
- 			}
- 		}
-
-	}
-	.top-bar{
- 	background: $darkgr;
- 		.top-bar-right {
- 			width: 30%!important;
- 			.menu {
- 				background: $darkgr;
- 				color: white;
- 				a{
- 					font-size: 4vh;
- 					color:white;
- 					padding: 15% 0 15% 0;
- 				}
-
- 			}
- 		}
-
-	}
+    .top-bar {
+        background: $darkgr;
+        .top-bar-left {
+            width: 70%!important;
+            .menu {
+                background: $darkgr;
+                color: white;
+                a {
+                    font-size: 4vh;
+                    color: white;
+                    padding: 15% 0 15% 1em;
+                }
+            }
+        }
+    }
+    .top-bar {
+        background: $darkgr;
+        .top-bar-right {
+            width: 30%!important;
+            .menu {
+                background: $darkgr;
+                color: white;
+                a {
+                    font-size: 4vh;
+                    color: white;
+                    padding: 15% 0 15% 0;
+                }
+            }
+        }
+    }
 }
