@@ -31,6 +31,12 @@ $b-tags: '.b-custom,.b-custom:visited';
  .button:visited {
  	color:white;
  }
+ .b-er {
+ 	background: red;
+ }
+ .b-er:hover{
+ 	background:darkred;
+ }
 #{$b-tags} {
  	color: white;
  	background: $gr;
@@ -51,6 +57,9 @@ $b-tags: '.b-custom,.b-custom:visited';
 .label {
  	background: $gold;
  }
+.form-label{
+	font-size: 2.5vh;
+}
 .label-show {
 	font-size: 1.3rem;
 }
