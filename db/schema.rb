@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227174200) do
+ActiveRecord::Schema.define(version: 20160228094320) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 20160227174200) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "product_promos", force: :cascade do |t|
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "product_id"
+    t.integer  "promotion_id"
+  end
+
+  add_index "product_promos", ["product_id", "promotion_id"], name: "index_product_promos_on_product_id_and_promotion_id"
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.string   "cloth_type"
@@ -62,6 +71,8 @@ ActiveRecord::Schema.define(version: 20160227174200) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float    "discount"
+    t.datetime "start"
+    t.datetime "end"
   end
 
   add_index "promotions", ["product_id"], name: "index_promotions_on_product_id"
@@ -71,6 +82,8 @@ ActiveRecord::Schema.define(version: 20160227174200) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "amount"
+    t.string   "promo_name"
   end
 
   add_index "transactions", ["product_id", "user_id"], name: "index_transactions_on_product_id_and_user_id"

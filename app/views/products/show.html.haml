@@ -17,6 +17,11 @@
 					.left.price.label.label-show.product-label.radius
 						$ #{@product.price}
 			%h6{:class=>"title"}
+				%strong Promotion
+				- @product.promotions.each do |pro|
+					%span.price.label.product-label.radius.original-price 
+						#{pro.name} #{pro.discount}%
+			%h6{:class=>"title"}
 				%strong Description:
 				= @product.description
 

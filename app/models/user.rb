@@ -10,7 +10,22 @@ class User < ActiveRecord::Base
   end
   def cart_total_price
   	total_price = 0
-	get_cart_products.each { |product| total_price+= product.price }
+	get_cart_products.each do|product| 
+		if product.promotions == nil
+			total_price+= product.price 
+		else
+			cur = 0
+			product.promotions.each do |pro|
+				
+				if pro.discount >= cur
+					cur = pro.discount
+				end
+			end
+			d_price = (product.price * (1-cur/100)).round(2)
+			total_price += d_price
+
+		end
+	end
 	total_price
   end 
   def get_cart_products

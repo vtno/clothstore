@@ -1,9 +1,9 @@
-Product,Discount
-Blue Lagoon,10
-Blossom Red,0
-Greenery,0
-Bluewy,0
-Tanny,10
-_Pweeeewd,30
-Skinny,0
-Heat Tech,50
+Name,Type ,Price,Description
+Blue Lagoon,Shirt,250,This is a pretty awesome shirt. 
+Blossom Red,Shorts,500,This is a pretty awesome shorts.
+Greenery,Shirt,400,This is a pretty green shirt.
+Bluewy,Shirt,400,This is a bad shirt
+Tanny,Sock,100,Great sock
+_Pweeeewd,Shirt,200,Oooohhh
+Skinny,Jeans,1000,This is expensive
+Heat Tech,Shirt,800,Uniqlo

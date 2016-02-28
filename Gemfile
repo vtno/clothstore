@@ -27,6 +27,7 @@ gem 'haml-rails'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'owlcarousel-rails'
+gem 'whenever', :require => false
 gem 'devise'
 gem 'redis', '>= 3.2.0'
 gem 'hiredis', '~> 0.6.0'

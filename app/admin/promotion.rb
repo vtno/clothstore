@@ -1,4 +1,4 @@
-ActiveAdmin.register Product do
+ActiveAdmin.register Promotion do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -12,6 +12,6 @@ ActiveAdmin.register Product do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+permit_params  :name, :start,:end, :discount
 
-	permit_params :name, :cloth_type,:price,:description,:promotion
 end

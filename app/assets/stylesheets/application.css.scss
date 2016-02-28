@@ -10,26 +10,28 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
- *= require foundation_and_overrides
  *= require owl.carousel
  *= require owl.theme
 
  */
+
 
 $darkgr: rgb(40, 40, 40);
 $darkergr: rgb(10, 10, 10);
 $gold: rgb(212, 175, 55);
 $gr: rgb(80, 80, 80);
 $b-tags: '.b-custom,.b-custom:visited';
+@import 'foundation_and_overrides';
 @import 'foundation-icons.css';
 .label.original-price {
-    text-decoration: line-through;
-    background-color: $darkergr;
-    font-size: 0.5rem;
-}
 
+    background-color: $darkergr;
+    font-size: 0.8rem;
+}
+.right {
+	float: right;
+}
 .button:visited {
     color: white;
 }

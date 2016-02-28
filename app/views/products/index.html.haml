@@ -22,14 +22,19 @@
                   = product.name
                   %span
                     (#{product.cloth_type})
-                - if product.promotion != 0
-                  %p.left.price.label.product-label.radius 
-                    $ #{product.price * (1-product.promotion/100)}
-                  %p{:class =>"left price label product-label radius original-price"}
-                    $ #{product.price}
-                - else
+                - if product.promotions != nil
+                  #{cur = 0; nil}
+                  - product.promotions.each do |pro|
+                    - if pro.discount>cur
+                      #{cur = pro.discount; nil}
+                - if cur == 0
                   %p.left.price.label.product-label.radius
                     $ #{product.price}
+                - else 
+                  %p.left.price.label.product-label.radius
+                    $ #{product.price}
+                  %p.left.price.label.product-label.radius.original-price 
+                    up to #{cur} % discount
               = link_to "Show details", product_path(product), class: "right button small b-custom" 
               
 = javascript_include_tag "owl"

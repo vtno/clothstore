@@ -10,21 +10,40 @@
 	-@cart_products.each do |product|
 		.row
 			%div{:class=>"cart-product large-12 column mb1", :data=> {:equalizer=>123}}
-				.column.large-2.text-center.p0{:data => {:equalizer_watch => 123}}
+				.column.large-2.text-center.p0.panel{:data => {:equalizer_watch => 123}}
 					=link_to product do
 						=image_tag asset_path('product_img.jpeg')
-				.column.large-7.glassy-bg{:data => {:equalizer_watch => 123}}
+				.column.large-7.glassy-bg.panel{:data => {:equalizer_watch => 123}}
 					%h3{:class=>"ptm title"}
 						=product.name 
 						(#{product.cloth_type})
 					%p{:class=>"ptm title"}
 						=product.description
-				.column.large-3.label.text-center{:data => {:equalizer_watch => 123}}
+				.column.large-3.label.text-center.panel{:data => {:equalizer_watch => 123}}
 					=link_to "", data: {targetUrl: remove_from_carts_path(product)} do
 						%i{:class=>"fi-x right"}
 					%h4{:class=>"scale title"} 
 						$
-						=product.price
+						#{cur = 0;nil}
+						#{n = ""}
+						#{x = false;nil}
+						#{ex = 0;nil}
+						- product.promotions.each do|pro|
+							- if Time.new > pro.start and Time.new < pro.end
+								- if pro.discount>cur
+									#{cur = pro.discount;nil}
+							- else 
+								#{x = true;nil}
+								#{n = pro.name;nil}
+								#{ex = pro.discount;nil}
+						#{(product.price*(1-cur/100)).round(2)}
+						%h4
+							(#{cur } % off!) 
+						- if x
+							%h6{:style =>"text-align:left;"}
+								%strong Expired promotions:
+								%br
+								#{n } (#{ex}% off)
 	.row
 		.column
 			%h2{:class=>"title mt1 right"} 

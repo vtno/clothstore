@@ -1,3 +1,4 @@
 class Promotion < ActiveRecord::Base
-  belongs_to :product
+  has_many :products, through: :product_promos
+  has_many :product_promos
 end
