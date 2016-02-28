@@ -7,10 +7,10 @@ Things you may want to cover:
 
 * run redis server and rails server and go to localhost:3000 to get to the app.
 
-run these two commands:
+#run these two commands:
 
-$redis-server
-$rails-s
+_$redis-server_
+_$rails-s_
 
 
 Please feel free to use a different markup language if you do not plan to run
