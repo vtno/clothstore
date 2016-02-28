@@ -1,12 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* run redis server and rails server and go to localhost:3000 to get to the app.
-
+#run redis server and rails server and go to localhost:3000 to get to the app.
+#
 #run these two commands:
 
 <tt>$redis-server</tt>
