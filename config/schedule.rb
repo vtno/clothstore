@@ -18,3 +18,8 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+#delete expired promotion everyday at midnight
+every 1.day, :at => "00:00" do 
+	rake "del:ex_promo"
+end
